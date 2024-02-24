@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Add Font Awesome CSS file -->
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+<link rel="stylesheet" href="styles1.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</head>
+<body> 
+<!-- This is the HTML code for the header -->
+<header class="header">
+    <!-- This is the navigation bar -->
+        <nav class="navbar">
+            <a href="#" class="nav-logo">EasyPay.</a>
+              <!-- This is the menu list -->
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                <a id="staff1" href="#" class="nav-link">Staff</a>
+                </li>
+                <li class="nav-item">
+                <a id="salary1" href="#" class="nav-link">Salary</a>
+                </li>
+                <li class="nav-item">
+                <a id="option" href="#" class="nav-link">Option</a>
+                </li>
+                <li class="nav-item">
+                 <a id="login" href="#" class="nav-link">Login</a>
+                </li>
+            </ul>
+              <!-- This is the hamburger menu for small screens -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header>
+
+<!-- This is the staff page -->
+<div id="staff-page" class="page active">
+  <h1>Add Staff</h1>
+  <p>In this page you can add salary for your employees.</p>
+    <!-- This is the button to toggle the form -->
+  <button id="toggle-form">Add Staff</button>
+  <form id="staff-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" required>
+
+    <label for="frequency">Frequency:</label>
+    <select id="frequency" name="frequency" required>
+      <option value="Monthly">Monthly</option>
+      <option value="Bi-Weekly">Bi-Weekly</option>
+      <option value="Weekly">Weekly</option>
+      <option value="Hourly">Hourly</option>
+    </select>
+
+    <label for="deductions">Deductions:</label>
+    <input type="number" id="deductions" name="deductions" required>
+
+    <label for="bonuses">Bonuses:</label>
+    <input type="number" id="bonuses" name="bonuses" required>
+
+    <button type="submit">Add Employee</button>
+  </form>
+ 
+    <!-- This is the table to display employee data -->
+  <table id="salary-table">
+        <!-- This is the table header -->
+    <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Salary</th>
+        <th>Frequency</th>
+        <th>Deductions</th>
+        <th>Bonuses</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+        <!-- This is the table body, where employee data is displayed -->
+
+   <tbody>
+         <!-- This is the table footer, which is currently unused -->      
+      </tbody>
+    </tfoot>
+  </table>
+  <!-- This is the search bar to search for employee data -->
+
+ <input type="text" class="search" placeholder="Search...">
+</div>
+
+ 
+<div id="salary-page" class="page">
+  <h1>Salary Page</h1>
+  <p>Here you can view and search employee data.</p>
+</div>
+
+<div id="option-page" class="page">
+  <h1>Option Page</h1>
+  <p>Choose a theme:</p>
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<div id="login-page" class="page">
+  <h1>Login Page</h1>
+  <button id="logoutBtn">Logout</button>
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="app1.js" defer></script>
+</body>
+  </html>

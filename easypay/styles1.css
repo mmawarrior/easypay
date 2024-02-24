@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default styles for light theme */
+body {
+  background-color: white;
+  color: #333;
+}
+
+/* Later in the css page there is a body.dark black/dark theme */
+
+html {
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+#staff-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#staff-list li {
+  margin-bottom: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  width: 290px;
+  margin-left: 30px;
+}
+
+#staff-list li span {
+  margin-right: 0px;
+}
+
+#staff-list li button {
+  border: none;
+  background-color: #f44336;
+  color: #fff;
+  padding: 15px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Page container */
+#staff-page {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* You can adjust the position of the text here*/
+.page {
+  display: none;
+  text-align: center;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Salary table */
+#salary-table {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 880px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+#salary-table th,
+#salary-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+#salary-table thead tr {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+#salary-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#salary-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Search bar */
+.search {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+form {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 5px 0px 5px #ddd;
+  max-width: 450px;
+  margin: 10px auto;
+}
+
+form.active {
+  display: flex;
+}
+
+/* Styles for dark theme */
+body.dark-mode {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+#option-page {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#option-page .switch {
+  margin-top: 2rem;
+}
+
+/* Toggle switch styles */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 auto; /* Add this line */
+  margin-bottom: 10px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Login page future */
+
+
+.dark-mode .page {
+  color: white; /* set text color to white */
+}
+
+.dark-mode .page h1 {
+  color: white; /* set h1 color to white */
+}
+
+.dark-mode .page p {
+  color: white; /* set p color to white */
+}
+
+.dark-mode .nav-link{
+    color: #ffffff;
+}
+
+.dark-mode .nav-logo {
+    color: #9182FA;
+}
+
+.dark-mode form {
+  background-color: #F1104F;
+  box-shadow: 0px 0px 0px #ddd;
+}
+
+.dark-mode #toggle-form {
+  background-color: #F1104F;
+  border: 1px solid white;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="number"],
+.dark-mode input[type="email"],
+.dark-mode input[type="deductions"],
+.dark-mode textarea {
+  color: #000;
+}
+
+.dark-mode select {
+  color: #000;
+}
+
+.dark-mode #staff-form button[type="submit"] {
+  background-color: #970000;
+  border-color: #FFF;
+  color: #FFF;
+}
+
+
+.dark-mode table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.dark-mode th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+.dark-mode tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.dark-mode th {
+  background-color: #6fbf72;
+  color: white;
+}
+
+/* Salary table */
+.dark-mode #salary-table {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 880px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.dark-mode #salary-table th,
+#salary-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.dark-mode #salary-table thead tr {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+}
+
+.dark-mode #salary-table tbody tr:nth-child(even) {
+  background-color: #474747;
+}
+
+.dark-mode #salary-table tbody tr:hover {
+  background-color: #1a1a1a;
+}
+
+.dark-mode #delete-btn {
+  background-color: #f1104f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive styles at different tablet version and mobile version*/
+@media only screen and (max-width: 768px) {
+  
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+        0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+  #staff-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  #salary-table {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .search {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  .dark-mode .nav-menu {
+            background-color: #1a1a1a;
+  }
+  .dark-mode .bar {
+    background-color: #ffffff;
+}
+.dark-mode .switch {
+    display: none;
+  }  
+  .nav-menu.active ~ #option-page .switch {
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+  #staff-page {
+    padding: 10px;
+  }
+
+  #salary-table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    max-width: none;
+  }
+
+  #salary-table thead {
+    background-color: #ddd;
+  }
+
+  #salary-table th,
+  #salary-table td {
+    display: table-cell;
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+  }
+
+  .search {
+    max-width: 100%;
+    margin: 10px auto;
+    margin-left: 0;
+    font-size: 0.8rem;
+    height: 30px;
+  }
+}
